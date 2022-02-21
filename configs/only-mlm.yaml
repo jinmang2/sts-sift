@@ -1,0 +1,43 @@
+ModelTrainingArguments:
+    # projects
+    model_path: null
+    wandb_project: Scatterlab-STS
+    apply_sift: False
+    training_mode: only-mlm
+
+    # 🤗 TrainingArguments
+    output_dir: outputs
+    seed: 42
+    save_total_limit: 5
+    num_train_epochs: 300
+    learning_rate: 5e-5
+    per_device_train_batch_size: 64
+    per_device_eval_batch_size: 64
+    gradient_accumulation_steps: 1
+    lr_scheduler_type: cosine
+    weight_decay: 0.01
+    save_steps: 10000
+    logging_steps: 10000
+    logging_dir: ./logs
+    logging_first_step: True
+    fp16: True
+    fp16_opt_level: O1
+    report_to: wandb
+    run_name: scatter-lab-sts-tapt
+
+    # models (roberta)
+    vocab_size: 30006
+    hidden_size: 512
+    num_hidden_layers: 6
+    num_attention_heads: 8
+    intermediate_size: 2048
+
+    # set token ids
+    cls_token_id: 2
+    sep_token_id: 3
+    pad_token_id: 4
+    unk_token_id: 5
+    mask_token_id: 6
+
+    # for mlm module
+    mlm_prob: 0.15

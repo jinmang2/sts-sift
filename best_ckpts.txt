@@ -1,0 +1,5 @@
+outputs/dapt-sift-0-fold/checkpoint-1500
+outputs/dapt-sift-1-fold/checkpoint-1500
+outputs/dapt-sift-2-fold/checkpoint-2000
+outputs/dapt-sift-3-fold/checkpoint-1500
+outputs/dapt-sift-4-fold/checkpoint-2000
